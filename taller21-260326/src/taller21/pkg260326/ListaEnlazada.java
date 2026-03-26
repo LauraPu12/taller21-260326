@@ -33,5 +33,14 @@ public class ListaEnlazada {
            System.out.print(aux.dato + " ");//se imprime el dato
            aux = aux.siguiente;
        }
+       //AQUI HAY UN ERROR
+   }
+   public void ordenar(){//se crea el metodo para ordenar la lista
+       if(cabeza==null){//en caso de que la lista este vacia
+           return;
+       }
+       Nodo actual;
+       Nodo siguiente;
+       //AQUI FALTA HACER UN FOR PARA ORDENAR LA LISTA
    }
 }
