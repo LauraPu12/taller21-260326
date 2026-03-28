@@ -68,4 +68,16 @@ public class ListaEnlazada {
        }
        return n; //si no falta ninguno entre ellos, falta es el ultimo numero
    }
+   public void mostrar(){//crear metodo para mostrar la lista
+       Nodo aux= cabeza; 
+       
+       while(aux!=null){
+           System.out.print(aux.dato+ " ");
+           aux=aux.siguiente;
+       }
+       System.out.println();
+   }
+   public int getTamaño(){ //usar un metodo get para devorlver el tamaño
+       return tamaño; //devolver el tamaño de la lista del usuario
+   }
 }
