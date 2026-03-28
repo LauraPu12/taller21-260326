@@ -13,7 +13,7 @@ public class ListaEnlazada {
     Nodo cabeza;//es el primer nodo de la lista
     int tamaño; 
     
-    public ListaEnlazada(){
+    public ListaEnlazada(){ //constructir vacio
         cabeza=null;
         tamaño=0; //inicialente el tamaño es 0
     }
@@ -31,22 +31,28 @@ public class ListaEnlazada {
            }
            aux.siguiente = nuevo;//para insertar al final
        }
+       tamaño++;
    }
-   public void mostrar(){//se crea el metodo para mostarlo
-       Nodo aux =cabeza; //para que incie desde la cabeza
-       
-       while(aux!=null){ //con esto se recorre la lista hasta el final
-           System.out.print(aux.dato + " ");//se imprime el dato
-           aux = aux.siguiente;
-       }
-       //AQUI HAY UN ERROR
-   }
+   
    public void ordenar(){//se crea el metodo para ordenar la lista
        if(cabeza==null){//en caso de que la lista este vacia
            return;
        }
-       Nodo actual;
-       Nodo siguiente;
-       //AQUI FALTA HACER UN FOR PARA ORDENAR LA LISTA
+      boolean orden;
+      do{
+          orden=false; //verifica si hubo cambios
+          Nodo actual=cabeza;
+          
+          while(actual.siguiente!=null){
+              if(actual.dato>actual.siguiente.dato){//ver si el actual es mayor para ordenar
+                  int guar=actual.dato; //guardar el valor final
+                  actual.dato=actual.siguiente.dato;//ordenar
+                  actual.siguiente.dato=guar;
+                  
+                  orden=true;//si hubo que ordenar
+              }
+              actual=actual.siguiente;//sigue al siguiente nodo
+          }
+      }while(orden); //repetir el proceso hasta que no haya cambios
    }
 }
