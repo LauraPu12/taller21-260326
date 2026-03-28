@@ -47,13 +47,16 @@ public class ListaEnlazada {
       }while(orden); //repetir el proceso hasta que no haya cambios
    }
    public int encontrar(int n){ //metodo para encontrar el numero que falta
+       if (cabeza==null){
+           return -1; //corrección: lista vacia
+       }
        Nodo actual= cabeza; //incia desde la cabeza
        if(actual.dato!=1){ //si el primer numeor no es uno, falta
            return 1;
        }
        while(actual.siguiente!=null){//aqui hace el recorrido
            if(actual.siguiente.dato-actual.dato>1){//si hay un salto de mas de un numero
-               return actual.dato;
+               return actual.dato + 1;//correccion: agregar +1 para el calculo del numero final
            }
            actual=actual.siguiente;//continua con el recorrido
        }
