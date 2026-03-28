@@ -14,11 +14,17 @@ public class Taller21260326 {
         for(int i=0;i < n;i++){ //leer n-1
             int num = sn.nextInt();//leer el numero del usuario
             list.agregar(num); //usar el metodo agregar de ListaEnlazada
-            
         }
-        list.ordenar();//usar el metodo de ordenar
-        int falta = list.encontrar(n);//buscar el numero que falta con el metodo encontrar
+        System.out.println("Lista:"); //mensaje para mostrar la lista que ingresa el usuario
+        list.mostrar(); //con metodo mostrar
         
+        list.ordenar();//usar el metodo de ordenar
+        
+        System.out.println("Lista ordenada:"); //mensaje para mostrar la lista ordenada
+        list.mostrar();//metodo mostrar
+        
+        int falta = list.encontrar(n);//buscar el numero que falta con el metodo encontrar
+        System.out.println("Numero faltante:");
         System.out.println(falta);//mostrar resultado
     }
     
