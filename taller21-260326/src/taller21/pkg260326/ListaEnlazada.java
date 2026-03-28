@@ -11,16 +11,22 @@ package taller21.pkg260326;
  */
 public class ListaEnlazada {
     Nodo cabeza;//es el primer nodo de la lista
+    int tamaño; 
+    
+    public ListaEnlazada(){
+        cabeza=null;
+        tamaño=0; //inicialente el tamaño es 0
+    }
 
    public void agregar(int dato){//metodo para agregar o insertar
        Nodo nuevo = new Nodo(dato);
        
        if (cabeza==null){//si la lista esta vacia
-           cabeza=nuevo;
+           cabeza=nuevo; //aqui el nuevo nodo es la cabeza
        }else{
            Nodo aux=cabeza; //nodo auxiliar para recorrer
            
-           while(aux.siguiente!=null){//para el siguiente 
+           while(aux.siguiente!=null){//para el siguiente mientras no sea el ultimo
                aux=aux.siguiente;
            }
            aux.siguiente = nuevo;//para insertar al final

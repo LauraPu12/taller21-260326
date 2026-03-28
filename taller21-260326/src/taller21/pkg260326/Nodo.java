@@ -14,7 +14,7 @@ public class Nodo { //se crea la clase nodo
     Nodo siguiente; //apunta al siguiente nodo
     
     public Nodo (int dato){
-        this.dato=dato; //se le asigna dato
+        this.dato=dato; //se le asigna valor al dato
         this.siguiente=null; 
     }
 }
