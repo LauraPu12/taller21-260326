@@ -1,14 +1,5 @@
 package taller21.pkg260326;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author anair
- */
 public class ListaEnlazada {
     Nodo cabeza;//es el primer nodo de la lista
     int tamaño; 
@@ -55,7 +46,7 @@ public class ListaEnlazada {
           }
       }while(orden); //repetir el proceso hasta que no haya cambios
    }
-   public encontrar(int n){ //metodo para encontrar el numero que falta
+   public int encontrar(int n){ //metodo para encontrar el numero que falta
        Nodo actual= cabeza; //incia desde la cabeza
        if(actual.dato!=1){ //si el primer numeor no es uno, falta
            return 1;
