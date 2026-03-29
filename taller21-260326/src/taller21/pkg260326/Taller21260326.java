@@ -8,8 +8,12 @@ public class Taller21260326 {
         // TODO code application logic here
         Scanner sn = new Scanner(System.in);
         
+        System.out.println("Ingrese el valor de n:");
+        
         int n = sn.nextInt(); //leer el valor de n
         ListaEnlazada list = new ListaEnlazada(); //aqui se crea la lista
+        
+        System.out.println("Ingrese los numeros:");
         
         for(int i=0;i < n;i++){ //leer n-1
             int num = sn.nextInt();//leer el numero del usuario
